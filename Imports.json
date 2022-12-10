@@ -1,0 +1,8 @@
+{
+    "imports" : {
+
+        "Path" : "https://deno.land/std@0.167.0/path/mod.ts" ,
+
+        "Deobfuscate" : "./Source/mod.ts"
+    }
+}

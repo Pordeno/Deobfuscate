@@ -1,0 +1,8 @@
+{
+    "importMap" : "Imports.json" ,
+
+    "tasks" : {
+        "example" : "deno run -A --unstable Examples/App.js"
+    }
+  }
+  
