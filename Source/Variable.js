@@ -1,7 +1,4 @@
 
-const isValidName = /^[$\_A-Z]+$/i;
-
-
 
 const reserved = [
     'implements' , 'instanceof' , 'interface' , 'protected' , 'arguments' , 
@@ -14,11 +11,14 @@ const reserved = [
 ]
 
 
+const isVariable = /^(?:\p{L}|[0-9_])+$/u;
+
+
 export function isVariableName ( string ){
 
     if(reserved.includes(string))
         return false
 
-    return isValidName
+    return isVariable
         .test(string);
 }
