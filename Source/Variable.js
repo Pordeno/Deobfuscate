@@ -11,12 +11,17 @@ const reserved = [
 ]
 
 
-const isVariable = /^(?:\p{L}|[0-9_])+$/u;
+const isReserved = 
+    new RegExp(`^${ reserved.join('|') }$`);
+
+
+const isVariable = 
+    /^(?:\p{L}|[0-9_])+$/u;
 
 
 export function isVariableName ( string ){
 
-    if(reserved.includes(string))
+    if(isReserved.test(string))
         return false
 
     return isVariable
